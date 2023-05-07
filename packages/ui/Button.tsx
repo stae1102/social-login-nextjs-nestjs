@@ -1,7 +1,12 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
+import { MouseEventHandler } from 'react';
 
-export const Button = () => {
-  return <button onClick={() => alert("boop")}>Boop</button>;
+interface Props {
+  onClick: MouseEventHandler<HTMLButtonElement>;
+}
+
+export const Button = ({ onClick }: Props) => {
+  return <button onClick={onClick}>Boop</button>;
 };
