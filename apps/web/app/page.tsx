@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <Header text='Web' />
-      <Button onClick={login} />
+      <Button onClick={login} content={'Login'} />
     </>
   );
 }
