@@ -7,6 +7,10 @@ interface Props {
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button = ({ onClick }: Props) => {
-  return <button onClick={onClick}>Boop</button>;
+interface PropsWithContent extends Props {
+  content: string;
+}
+
+export const Button = ({ onClick, content }: PropsWithContent) => {
+  return <button onClick={onClick}>{content}</button>;
 };
