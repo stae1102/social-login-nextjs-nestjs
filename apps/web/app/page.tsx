@@ -6,11 +6,14 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 export default function Page() {
   const googleAuth = new GoogleAuthProvider();
+  const login = async () => {
+    const result = await signInWithPopup(auth, googleAuth);
+  };
 
   return (
     <>
       <Header text='Web' />
-      <Button />
+      <Button onClick={login} />
     </>
   );
 }
