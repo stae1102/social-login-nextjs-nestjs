@@ -1,4 +1,4 @@
-export interface ReqUser {
+export interface ReqFirebaseUser {
   uid: string;
   firebaseId: any;
 }

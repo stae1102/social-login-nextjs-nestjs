@@ -2,7 +2,7 @@ import { Controller, Post, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { SignupGuard } from '../guards/signup.guard';
 import { RequestUser } from '../decorators/request-user.decorator';
-import { ReqUser } from '../types/request-user.type';
+import { ReqFirebaseUser } from '../types/request-firebase-user.type';
 
 @Controller()
 export class AuthController {
@@ -10,7 +10,7 @@ export class AuthController {
 
   @Post('signup')
   @UseGuards(SignupGuard)
-  signup(@RequestUser() user: ReqUser) {
+  signup(@RequestUser() user: ReqFirebaseUser) {
     this.authService.signup(user);
   }
 }
