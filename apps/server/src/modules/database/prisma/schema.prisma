@@ -22,4 +22,6 @@ model user {
   email String @unique @db.VarChar(100)
   provider Provider
   fcmToken String @db.Text
+  uid String @db.VarChar(50)
+  firebaseId String @db.VarChar(50)
 }
